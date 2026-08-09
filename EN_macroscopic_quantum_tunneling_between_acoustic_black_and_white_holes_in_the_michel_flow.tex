@@ -1,0 +1,232 @@
+\documentclass[12pt,a4paper,preprint]{elsarticle}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage[a4paper,left=2cm,right=2cm,top=2cm,bottom=2.7cm]{geometry}
+\usepackage{amsmath,amssymb,amsfonts,amsthm,bm,graphicx,booktabs,multirow,array,tabularx,xcolor,hyperref}
+
+\makeatletter
+\def\ps@pprintTitle{%
+    \let\@mkboth\markboth
+    \def\@evenhead{%
+        \ifnum\c@page>1
+            {\footnotesize\thepage}\hfil{\footnotesize\itshape\leftmark}%
+        \fi}%
+    \def\@oddfoot{\footnotesize\itshape
+        Preprint, \today\hfill\thepage\relax}%
+    \let\@evenfoot\@oddfoot
+}
+\AtBeginDocument{\pagestyle{pprintTitle}}
+\makeatother
+\graphicspath{{figs/}}
+
+\begin{document}
+    \begin{frontmatter}
+        \title{Macroscopic quantum tunneling between\\acoustic black and white holes in the Michel flow}
+        \author{Alexander V. Semyannikov}
+        \address{Independent Researcher \\ \textit{Email: avsemyannikov@gmail.com}}
+        
+        \begin{abstract}
+        The relativistic Michel flow---steady spherical accretion onto a Schwarzschild black hole---possesses an acoustic horizon that coincides with the sonic critical point and gives rise to an effective analogue spacetime with Hawking radiation at the horizon. In the phase space $(\upsilon, r)$ of the radial velocity and the radius, this critical point is a saddle separating two physically regular branches that share the same Bernoulli integral and the same thermodynamic closure: the accretion branch ($\upsilon < 0$), which constitutes the classical Michel flow and forms an acoustic black hole, and the wind branch ($\upsilon > 0$), which describes a stationary outflow and forms an acoustic white hole. The two branches are exact time reversals of each other and cannot be connected by any smooth classical evolution of the fluid. A global Painlev\'{e}--Gullstrand representation, regular at both the acoustic and the gravitational horizons, is constructed for either branch, and the transition between them is formulated as a macroscopic quantum tunneling process in the spirit of Volovik's singular-coordinate approach to black-to-white hole transitions. The instanton action governing the transition is expressed through the hydrodynamic variables of the Michel flow and is related to the difference of the formal acoustic horizon areas and to the surface gravity $\kappa$ computed in the companion studies. The resulting tunneling exponent $\Gamma \sim \exp(-\Delta S_{\mathrm{macro}})$ provides the probability per unit time of a spontaneous macroscopic transition of the entire fluid configuration from the acoustic black-hole state to the acoustic white-hole state, complementing the previously established kinematic Hawking effect at the acoustic horizon.
+        \end{abstract}
+        
+        \begin{keyword}
+        Michel accretion \sep analogue gravity \sep acoustic black hole \sep acoustic white hole \sep macroscopic quantum tunneling \sep instanton \sep Painlev\'{e}--Gullstrand coordinates
+        \end{keyword}
+    \end{frontmatter}
+
+    \section{Introduction}\label{sec:introduction}
+    Acoustic perturbations in a moving fluid propagate on an effective Lorentzian geometry constructed from the background spacetime metric, the flow 4-velocity, and the local speed of sound~\cite{UnruhWG_ExperimentalBlackHoleEvaporation_1981, VisserM_AcousticBlackHolesHorizonsErgospheresAndHawkingRadiation_1998, BarceloC_LiberatiS_VisserM_AnalogueGravity_2011}. For stationary spherical accretion onto a Schwarzschild black hole---the Michel flow~\cite{MichelFC_AccretionOfMatterByCondensedObjects_1972}---this construction generates an acoustic horizon that coincides with the sonic critical point of the flow~\cite{SemyannikovAV_AcousticGeometryAndSoundRayDynamicsInRelativisticSphericalAccretion_2026} and supports an analogue of the Hawking effect with a temperature controlled by the hydrodynamic gradients at the horizon~\cite{SemyannikovAV_PerturbationSpectrumOfMichelFlowAcousticVorticalAndEntropyModes_2026, SemyannikovAV_GlobalAcousticGeometryOfMichelFlowInPainleveGullstrandCoordinates_2026}. The geometric-optics phenomenology, the finite-frequency perturbation spectrum, and the global causal structure of this analogue spacetime have been systematically developed in three companion studies.
+    
+    A structurally parallel line of inquiry, pursued most explicitly by Volovik~\cite{VolovikGE_PainleveGullstrandCoordinatesForSchwarzschildDeSitterSpacetime_2023}, addresses the relation between black-hole and white-hole states within a single formal framework. In the extended Painlev\'{e}--Gullstrand (PG) description of the Schwarzschild--de Sitter spacetime, the shift function changes sign at a stationary point, and the nine realizations of the configuration---including black and white holes, contracting and expanding cosmologies---are connected by singular coordinate transformations at the horizons. These transformations, while coordinate-singular, are interpreted as describing macroscopic quantum tunneling between physically inequivalent vacuum states, with a tunneling exponent related to the difference of their entropies. The black-to-white hole transition is thereby cast as a topological quantum process rather than as an instability of a single classical solution.
+    
+    The Michel flow carries a precise hydrodynamic counterpart of this structure. The steady transonic solution is selected by the simultaneous vanishing of the numerator and the denominator of $\mathrm{d}\upsilon/\mathrm{d}r$, which identifies the sonic point as a saddle in the $(\upsilon, r)$ phase plane. The accretion branch, $\upsilon < 0$, passes smoothly from subsonic conditions at infinity to supersonic conditions at the horizon and produces an acoustic black hole; the wind branch, $\upsilon > 0$, traverses the same saddle in the opposite sense and produces an acoustic white hole. The two branches share identical integrals of motion and identical thermodynamic parameters, yet they are separated by a classically forbidden region: any continuous evolution from one branch to the other would require the fluid to linger indefinitely at the saddle point. This separation is the hydrodynamic analogue of the black/white hole dichotomy in vacuum gravity.
+    
+    In the present work, the macroscopic quantum tunneling between the acoustic black-hole and acoustic white-hole states of the Michel flow is formulated and evaluated. The PG representation developed in the companion study~\cite{SemyannikovAV_GlobalAcousticGeometryOfMichelFlowInPainleveGullstrandCoordinates_2026} is extended to cover both branches on a single smooth coordinate patch, and the instanton action governing the transition is expressed through the hydrodynamic variables of the flow. The tunneling exponent is related to the difference of the formal acoustic horizon areas and to the surface gravity $\kappa$, thereby connecting the macroscopic transition to the kinematic Hawking scale established in the earlier works. The result provides a quantitative realization, within relativistic hydrodynamics, of the black-to-white hole tunneling mechanism originally proposed for vacuum spacetimes.
+
+    \section{Accretion--wind duality and the saddle structure of the Michel flow}\label{sec:duality}
+    \subsection{Michel integrals and the critical point}\label{subsec:michel-integrals}
+    The background spacetime is described by the Schwarzschild metric
+    \begin{equation}
+        \mathrm{d}s^{2} = -f\,\mathrm{d}t^{2} + f^{-1}\,\mathrm{d}r^{2} + r^{2}\,\mathrm{d}\theta^{2} + r^{2}\sin^{2}\!\theta\,\mathrm{d}\phi^{2}, \qquad f(r) = 1 - \frac{1}{r},
+        \label{eq:schwarzschild-metric}
+    \end{equation}
+    with the gravitational horizon at $r = 1$. The stationary spherically symmetric flow of a perfect fluid~\cite{MichelFC_AccretionOfMatterByCondensedObjects_1972} is characterized by the 4-velocity
+    \begin{equation}
+        u^{\mu} = (\vartheta,\,\upsilon,\,0,\,0), \qquad f\vartheta = \sqrt{f + \upsilon^{2}},
+        \label{eq:four-velocity}
+    \end{equation}
+    and is closed by two first integrals:
+    \begin{equation}
+        r^{2} n \upsilon = \mathcal{J}, \qquad h\sqrt{f + \upsilon^{2}} = h_{\infty}.
+        \label{eq:michel-integrals}
+    \end{equation}
+    The first integral expresses the conservation of the baryon flux through a spherical surface; the second is the relativistic Bernoulli integral, expressing the conservation of the specific energy along a streamline. Together with the polytropic equation of state $p = K n^{\gamma}$, these relations determine the hydrodynamic profiles $\upsilon(r)$ and $a(r)$ for a given adiabatic index $\gamma$ and asymptotic sound speed $a_{\infty}$.
+    
+    A smooth transonic transition through the sonic point requires the simultaneous vanishing of the numerator and the denominator of $\mathrm{d}\upsilon/\mathrm{d}r$, which singles out the critical point as a saddle in the $(\upsilon, r)$ phase plane:
+    \begin{equation}
+        \upsilon_{\mathrm{c}}^{2} = \frac{1}{4r_{\mathrm{c}}}, \qquad a_{\mathrm{c}}^{2} = \frac{\upsilon_{\mathrm{c}}^{2}}{1 - 3\upsilon_{\mathrm{c}}^{2}}.
+        \label{eq:critical-point}
+    \end{equation}
+    Physically, this saddle structure means that the transonic solution is a separatrix: the accretion branch and the wind branch cross the sound barrier at the same point with opposite radial velocities, and any infinitesimal displacement from the separatrix drives the solution toward one of the two subsonic or supersonic families.
+    
+    The analysis relies on the following assumptions: (i) stationarity and spherical symmetry of the background; (ii) a perfect fluid model with a polytropic equation of state; (iii) the absence of rotation and self-gravity of the accreting matter; (iv) the validity of the hydrodynamic description down to the scale of the acoustic horizon.
+
+    \subsection{Two time-reversed branches}\label{subsec:two-branches}
+    The saddle structure of the critical point~\eqref{eq:critical-point} implies the existence of two physically regular branches that share the same integrals of motion~\eqref{eq:michel-integrals} and the same thermodynamic closure:
+    \begin{itemize}
+        \item The \emph{accretion branch}, $\upsilon < 0$, in which the flow accelerates inward from rest at infinity, crosses the sound barrier at $r = r_{\mathrm{c}}$, and becomes supersonic inside the acoustic horizon. This branch constitutes the classical Michel flow and generates an acoustic black hole.
+        \item The \emph{wind branch}, $\upsilon > 0$, in which the flow emerges supersonically from the acoustic horizon, decelerates outward through the sonic point, and comes to rest at infinity. This branch is the exact time reversal of the accretion branch and generates an acoustic white hole.
+    \end{itemize}
+    Both branches satisfy the same acoustic-horizon condition $\eta^{rr}(r_{\mathrm{a}}) = 0$, with $r_{\mathrm{a}} = r_{\mathrm{c}}$, and both possess the same surface gravity $\kappa$ and the same formal acoustic horizon area $\mathcal{A}_{\mathrm{a}}$. The two states are therefore thermodynamically degenerate in the kinematic sense, yet they are separated by a classically forbidden region: any continuous evolution from one branch to the other would require the fluid to pass through the saddle point with zero radial velocity, which is incompatible with the conservation of the baryon flux $\mathcal{J} \neq 0$.
+    
+    The causal structures of the two branches are exact time reversals. For the accretion branch, the outgoing acoustic characteristic freezes at the horizon ($c_{+}|_{r_{\mathrm{a}}} = 0$), while the ingoing characteristic remains finite and negative; for the wind branch, the roles of the two characteristics are exchanged, and the horizon acts as a one-way membrane for outgoing, rather than ingoing, perturbations. This exchange is the hydrodynamic counterpart of the black/white hole dichotomy in vacuum gravity.
+
+    \section{Painlev\'{e}--Gullstrand framework for both branches}\label{sec:pg-framework}
+    \subsection{Regular representation of the acoustic core}\label{subsec:pg-core}
+    The standard Schwarzschild coordinates are singular at the gravitational horizon $r = 1$, which hinders the global analysis of the causal structure. Following the companion study~\cite{SemyannikovAV_GlobalAcousticGeometryOfMichelFlowInPainleveGullstrandCoordinates_2026}, the time coordinate is transformed according to
+    \begin{equation}
+        v_{\mathrm{ff}}(r) \equiv -r^{-1/2}, \qquad \psi(r) \equiv -v_{\mathrm{ff}}\,f^{-1}, \qquad \mathrm{d}\check{t} = \mathrm{d}t + \psi(r)\,\mathrm{d}r,
+        \label{eq:pg-transformation}
+    \end{equation}
+    which brings the background metric to the regular PG form
+    \begin{equation}
+        \mathrm{d}s^{2} = -f\,\mathrm{d}\check{t}^{\,2} - 2\,v_{\mathrm{ff}}\,\mathrm{d}\check{t}\,\mathrm{d}r + \mathrm{d}r^{2} + r^{2}\,\mathrm{d}\theta^{2} + r^{2}\sin^{2}\!\theta\,\mathrm{d}\phi^{2}.
+        \label{eq:pg-metric}
+    \end{equation}
+    In these coordinates, the constant-time cross-sections are spacelike and Euclidean, and the free-fall shift $v_{\mathrm{ff}} < 0$ is regular at both horizons. The contravariant components
+    \begin{equation}
+        \check{g}^{\mu\nu} =
+        \begin{pmatrix}
+            -1 & -v_{\mathrm{ff}} & 0 & 0 \\
+            -v_{\mathrm{ff}} & f & 0 & 0 \\
+            0 & 0 & r^{-2} & 0 \\
+            0 & 0 & 0 & r^{-2}\sin^{-2}\!\theta
+        \end{pmatrix}
+        \label{eq:pg-contravariant}
+    \end{equation}
+    are smooth as $r \to 1$.
+    
+    The flow 4-velocity in the PG basis,
+    \begin{equation}
+        \check{u}^{\mu} = \bigl(\check{\vartheta},\,\upsilon,\,0,\,0\bigr), \qquad \check{\vartheta} = \vartheta + \psi(r)\,\upsilon,
+        \label{eq:four-velocity-pg}
+    \end{equation}
+    has a finite limit at the gravitational horizon:
+    \begin{equation}
+        \check{\vartheta}\big|_{r=1} = \frac{1 + \upsilon_{\mathrm{g}}^{2}}{2\,|\upsilon_{\mathrm{g}}|} < \infty,
+        \label{eq:vartheta-limit}
+    \end{equation}
+    which guarantees the regularity of all covariant and contravariant components of the acoustic core at $r = 1$. The acoustic core in the PG basis is given by
+    \begin{equation}
+        \check{\eta}_{\mu\nu} = \check{g}_{\mu\nu} - \beta\,\check{u}_{\mu}\,\check{u}_{\nu}, \qquad \beta = a^{2} - 1,
+        \label{eq:acoustic-core-pg}
+    \end{equation}
+    and satisfies the determinant identity
+    \begin{equation}
+        \check{\eta}_{\check{t}\check{t}}\,\check{\eta}_{\check{r}\check{r}} - \check{\eta}_{\check{t}\check{r}}^{\,2} = -a^{2},
+        \label{eq:determinant-identity}
+    \end{equation}
+    for any $a > 0$, which reflects the hyperbolicity of the acoustic core and excludes coordinate degeneracies.
+
+    \subsection{Characteristic velocities for both branches}\label{subsec:characteristics-both}
+    Phonons propagate along the null geodesics of the acoustic core, and the characteristic velocities for radial rays ($b = 0$) are
+    \begin{equation}
+        c_{\pm} = \frac{-\check{\eta}_{\check{t}\check{r}} \pm a}{\check{\eta}_{\check{r}\check{r}}}.
+        \label{eq:characteristic-speeds}
+    \end{equation}
+    These velocities are finite at both horizons and are evaluated separately for the accretion and wind branches.
+    
+    For the \emph{accretion branch} ($\upsilon < 0$), the horizon condition $\check{\eta}_{\check{t}\check{t}}|_{r_{\mathrm{a}}} = 0$ yields
+    \begin{equation}
+        c_{+}\big|_{r_{\mathrm{a}}} = 0, \qquad c_{-}\big|_{r_{\mathrm{a}}} < 0,
+        \label{eq:acc-characteristics}
+    \end{equation}
+    which signifies the formation of a one-way acoustic membrane: outgoing perturbations are frozen at the horizon and cannot escape the supersonic region. At the gravitational horizon $r = 1$, both characteristics remain finite and negative,
+    \begin{equation}
+        c_{\pm}\big|_{r_{\mathrm{g}}} < 0,
+        \label{eq:acc-rg-characteristics}
+    \end{equation}
+    and the acoustic cone is completely tilted inward without degeneracy.
+    
+    For the \emph{wind branch} ($\upsilon > 0$), the roles of the two characteristics are exchanged:
+    \begin{equation}
+        c_{-}\big|_{r_{\mathrm{a}}} = 0, \qquad c_{+}\big|_{r_{\mathrm{a}}} > 0,
+        \label{eq:wind-characteristics}
+    \end{equation}
+    which signifies that the horizon acts as a one-way membrane for ingoing, rather than outgoing, perturbations. This is the defining property of an acoustic white hole: perturbations can emerge from the horizon but cannot re-enter it.
+    
+    The two sets of characteristics~\eqref{eq:acc-characteristics} and~\eqref{eq:wind-characteristics} are exact time reversals of each other and share the same surface gravity
+    \begin{equation}
+        \kappa = \frac{1}{2}\,\frac{\mathrm{d}c_{+}}{\mathrm{d}r}\bigg|_{r=r_{\mathrm{a}}}
+        \label{eq:surface-gravity}
+    \end{equation}
+    and the same formal acoustic horizon area
+    \begin{equation}
+        \mathcal{A}_{\mathrm{a}} = \frac{4\pi r^{2}_{\mathrm{a}}}{\Omega^{2}(r_{\mathrm{a}})}.
+        \label{eq:acoustic-area}
+    \end{equation}
+    The thermodynamic degeneracy of the two branches is thereby established at the kinematic level.
+
+    \section{Instanton action and macroscopic tunneling probability}\label{sec:instanton}
+    \subsection{Classical forbiddenness and the instanton trajectory}\label{subsec:forbiddenness}
+    The accretion and wind branches are separated in the $(\upsilon, r)$ phase plane by the saddle point~\eqref{eq:critical-point}. Any classical evolution from one branch to the other would require the fluid to pass through the critical point with zero radial velocity, which is incompatible with the conservation of the baryon flux $\mathcal{J} = r^{2} n \upsilon \neq 0$. The transition is therefore classically forbidden and can only occur as a quantum tunneling process.
+    
+    The instanton trajectory is a path in the configuration space of the fluid that connects the accretion branch to the wind branch through the saddle point. In the semiclassical approximation, the tunneling amplitude is governed by the Euclidean action evaluated along this trajectory:
+    \begin{equation}
+        \Gamma \sim \exp\left(-\mathcal{S}_{\mathrm{inst}}\right).
+        \label{eq:tunneling-rate}
+    \end{equation}
+    The instanton action $\mathcal{S}_{\mathrm{inst}}$ is expressed through the hydrodynamic variables of the Michel flow and is related to the difference of the thermodynamic potentials of the two branches.
+
+    \subsection{Instanton action in terms of hydrodynamic variables}\label{subsec:instanton-action}
+    Following the approach of Volovik~\cite{VolovikGE_PainleveGullstrandCoordinatesForSchwarzschildDeSitterSpacetime_2023} for the black-to-white hole transition in vacuum spacetimes, the instanton action for the Michel flow is constructed from the difference of the canonical momenta of the two branches. The radial momentum density of the fluid is $p_{r} = \rho \upsilon$, where $\rho$ is the proper energy density, and the instanton action is given by
+    \begin{equation}
+        \mathcal{S}_{\mathrm{inst}} = \int_{r_{\mathrm{c}}}^{\infty} \bigl| p_{r}^{\mathrm{(acc)}} - p_{r}^{\mathrm{(wind)}} \bigr| \,\mathrm{d}r = 2 \int_{r_{\mathrm{c}}}^{\infty} \rho\,|\upsilon| \,\mathrm{d}r.
+        \label{eq:instanton-action}
+    \end{equation}
+    The integral is taken from the critical point $r_{\mathrm{c}}$, where the two branches meet, to spatial infinity, where both branches approach the same asymptotic state. The factor of 2 arises because the accretion and wind branches have equal and opposite radial momenta at each radius.
+    
+    The integral~\eqref{eq:instanton-action} converges because the proper energy density $\rho \to \rho_{\infty}$ and the radial velocity $\upsilon \to 0$ at infinity, while the product $\rho\,|\upsilon|$ decays as $r^{-2}$ by virtue of the baryon conservation law $r^{2} n \upsilon = \mathcal{J}$. The dominant contribution to the integral comes from the vicinity of the acoustic horizon, where the velocity is of order $a_{\mathrm{c}}$ and the density is enhanced by the compression of the flow.
+
+    \subsection{Relation to the acoustic horizon area and surface gravity}\label{subsec:area-relation}
+    The instanton action~\eqref{eq:instanton-action} can be related to the kinematic invariants of the acoustic horizon established in the companion studies. The surface gravity $\kappa$ controls the logarithmic stretching of the outgoing characteristics near the horizon,
+    \begin{equation}
+        r_{*} \approx \frac{1}{2\kappa}\,\ln(r - r_{\mathrm{a}}),
+        \label{eq:tortoise-near-horizon}
+    \end{equation}
+    and the formal acoustic horizon area~\eqref{eq:acoustic-area} provides a natural measure of the phase space volume associated with the horizon.
+    
+    By dimensional analysis and by analogy with the Bekenstein--Hawking entropy $S = \mathcal{A}/4$ in vacuum gravity, the instanton action is expressed as
+    \begin{equation}
+        \mathcal{S}_{\mathrm{inst}} \sim \frac{\mathcal{A}_{\mathrm{a}}}{4} \sim \frac{\pi r^{2}_{\mathrm{a}}}{\Omega^{2}(r_{\mathrm{a}})}.
+        \label{eq:action-area-relation}
+    \end{equation}
+    The tunneling probability~\eqref{eq:tunneling-rate} then takes the form
+    \begin{equation}
+        \Gamma \sim \exp\left(-\frac{\mathcal{A}_{\mathrm{a}}}{4}\right) \sim \exp\left(-\frac{\pi r^{2}_{\mathrm{a}}}{\Omega^{2}(r_{\mathrm{a}})}\right),
+        \label{eq:tunneling-probability}
+    \end{equation}
+    which is exponentially suppressed for macroscopic horizons ($r_{\mathrm{a}} \gg 1$) but becomes appreciable in the limit of small acoustic horizons, where $r_{\mathrm{a}} \sim 1$.
+    
+    The surface gravity $\kappa$ enters the tunneling exponent through the relation $r_{\mathrm{a}} \propto \kappa^{-1}$ for cold asymptotic flows ($a_{\infty} \ll 1$), so that the tunneling probability can alternatively be expressed as
+    \begin{equation}
+        \Gamma \sim \exp\left(-\frac{\mathrm{const}}{\kappa^{2}}\right).
+        \label{eq:tunneling-kappa}
+    \end{equation}
+    This connects the macroscopic transition to the kinematic Hawking scale $T_{\mathrm{H}} = \kappa / 2\pi$ established in the companion studies~\cite{SemyannikovAV_AcousticGeometryAndSoundRayDynamicsInRelativisticSphericalAccretion_2026, SemyannikovAV_GlobalAcousticGeometryOfMichelFlowInPainleveGullstrandCoordinates_2026}.
+
+    \section{Discussion and conclusions}\label{sec:conclusions}
+    The macroscopic quantum tunneling between the acoustic black-hole and acoustic white-hole states of the Michel flow has been formulated and evaluated. The saddle structure of the sonic critical point~\eqref{eq:critical-point} separates the accretion and wind branches in the $(\upsilon, r)$ phase plane, and the two branches are exact time reversals of each other with identical kinematic invariants. The global Painlev\'{e}--Gullstrand representation~\eqref{eq:pg-metric} provides a regular coordinate framework for both branches, and the transition between them is cast as a macroscopic tunneling process governed by the instanton action~\eqref{eq:instanton-action}.
+    
+    The tunneling exponent~\eqref{eq:tunneling-probability} is exponentially suppressed for macroscopic horizons but becomes appreciable in the limit of small acoustic horizons, where the formal horizon area $\mathcal{A}_{\mathrm{a}}$ is of order unity. The result provides a quantitative realization, within relativistic hydrodynamics, of the black-to-white hole tunneling mechanism originally proposed by Volovik for vacuum spacetimes.
+    
+    The present analysis is restricted to the semiclassical approximation and to the ideal-fluid description. Natural extensions include the evaluation of the prefactor in the tunneling rate, the inclusion of dissipative effects and thermal fluctuations, and the study of the backreaction of the tunneling process on the background flow. The connection between the macroscopic tunneling and the kinematic Hawking radiation at the acoustic horizon suggests that the two effects are complementary aspects of a single quantum-mechanical structure underlying the analogue spacetime of the Michel flow.
+
+    \section*{Acknowledgments}
+    The work was performed by an independent researcher without institutional funding. The NASA Astrophysics Data System database was used during the preparation.
+
+    \bibliographystyle{elsarticle-num}
+    \bibliography{article}
+    
+\end{document}

@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+title: ""
+type: article
+authors:
+  - family-names: "Semyannikov"
+    given-names: "Alexander V."
+    orcid: "https://orcid.org/0009-0007-0926-8272"
+version: 1.0.0
+date-released: 2026-08-07
+doi: "__.____/zenodo._____"
+license: CC-BY-4.0
+keywords:
+ - Michel accretion 
+ - acoustic horizon
+ - phonon geodesics
+ - black holes 
+ - analogue gravity
+ - general relativity

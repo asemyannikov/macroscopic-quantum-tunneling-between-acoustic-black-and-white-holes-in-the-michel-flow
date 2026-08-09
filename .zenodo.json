@@ -1,0 +1,26 @@
+{
+  "title": "Global Acoustic Geometry of Michel Flow in Painlevé-Gullstrand Coordinates",
+  "upload_type": "publication",
+  "publication_type": "article",
+  "publication_date": "2026-08-07",
+  "creators": [
+    {
+      "name": "Semyannikov, Alexander V.",
+      "affiliation": "Independent Researcher",
+      "orcid": "0009-0007-0926-8272"
+    }
+  ],
+  "description": "",
+  "access_right": "open",
+  "license": "cc-by-4.0",
+  "keywords": [
+      "Michel accretion",
+      "acoustic horizon",
+      "phonon geodesics",
+      "black holes",
+      "analogue gravity",
+      "general relativity"
+  ],
+  "version": "1.0.0",
+  "language": "eng"
+}

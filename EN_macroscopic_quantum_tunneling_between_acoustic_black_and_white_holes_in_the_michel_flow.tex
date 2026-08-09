@@ -1,5 +1,4 @@
 \documentclass[12pt,a4paper,preprint]{elsarticle}
-\usepackage[T2A]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
 \usepackage[a4paper,left=2cm,right=2cm,top=2cm,bottom=2.7cm]{geometry}
@@ -27,7 +26,7 @@
         \address{Independent Researcher \\ \textit{Email: avsemyannikov@gmail.com} \\[6pt] \textit{\today}}
         
         \begin{abstract}
-        The relativistic Michel flow---steady spherical accretion onto a Schwarzschild black hole---possesses an acoustic horizon that coincides with the sonic critical point and gives rise to an effective analogue spacetime with Hawking radiation at the horizon. In the phase space $(\upsilon, r)$ of the radial velocity and the radius, this critical point is a saddle separating two physically regular branches that share the same Bernoulli integral and the same thermodynamic closure: the accretion branch ($\upsilon < 0$), which constitutes the classical Michel flow and forms an acoustic black hole, and the wind branch ($\upsilon > 0$), which describes a stationary outflow and forms an acoustic white hole. The two branches are exact time reversals of each other and cannot be connected by any smooth classical evolution of the fluid. A global Painlev\'{e}--Gullstrand representation, regular at both the acoustic and the gravitational horizons, is constructed for either branch, and the transition between them is formulated as a macroscopic quantum tunneling process in the spirit of Volovik's singular-coordinate approach to black-to-white hole transitions. The instanton action governing the transition is expressed through the hydrodynamic variables of the Michel flow and is related to the difference of the formal acoustic horizon areas and to the surface gravity $\kappa$ computed in the companion studies. The resulting tunneling exponent $\Gamma \sim \exp(-\Delta S_{\mathrm{macro}})$ provides the probability per unit time of a spontaneous macroscopic transition of the entire fluid configuration from the acoustic black-hole state to the acoustic white-hole state, complementing the previously established kinematic Hawking effect at the acoustic horizon.
+        The relativistic Michel flow---steady spherical accretion onto a Schwarzschild black hole---possesses an acoustic horizon that coincides with the sonic critical point and gives rise to an effective analogue spacetime with Hawking radiation at the horizon. In the phase space $(\upsilon, r)$ of the radial velocity and the radius, this critical point is a saddle separating two physically regular branches that share the same Bernoulli integral and the same thermodynamic closure: the accretion branch ($\upsilon < 0$), which constitutes the classical Michel flow and forms an acoustic black hole, and the wind branch ($\upsilon > 0$), which describes a stationary outflow and forms an acoustic white hole. The two branches are exact time reversals of each other and cannot be connected by any smooth classical evolution of the fluid. A global Painlev\'{e}--Gullstrand representation, regular at both the acoustic and the gravitational horizons, is constructed for either branch, and the transition between them is formulated as a macroscopic quantum tunneling process in the spirit of Volovik's singular-coordinate approach to black-to-white hole transitions. The instanton action governing the transition is expressed through the hydrodynamic variables of the Michel flow and is related to the formal acoustic horizon area and to the surface gravity $\kappa$ computed in the companion studies. The resulting tunneling exponent $\Gamma \sim \exp(-\mathcal{S}_{\mathrm{inst}})$ provides the probability per unit time of a spontaneous macroscopic transition of the entire fluid configuration from the acoustic black-hole state to the acoustic white-hole state, complementing the previously established kinematic Hawking effect at the acoustic horizon.
         \end{abstract}
         
         \begin{keyword}
@@ -42,13 +41,13 @@
     
     The Michel flow carries a precise hydrodynamic counterpart of this structure. The steady transonic solution is selected by the simultaneous vanishing of the numerator and the denominator of $\mathrm{d}\upsilon/\mathrm{d}r$, which identifies the sonic point as a saddle in the $(\upsilon, r)$ phase plane. The accretion branch, $\upsilon < 0$, passes smoothly from subsonic conditions at infinity to supersonic conditions at the horizon and produces an acoustic black hole; the wind branch, $\upsilon > 0$, traverses the same saddle in the opposite sense and produces an acoustic white hole. The two branches share identical integrals of motion and identical thermodynamic parameters, yet they are separated by a classically forbidden region: any continuous evolution from one branch to the other would require the fluid to linger indefinitely at the saddle point. This separation is the hydrodynamic analogue of the black/white hole dichotomy in vacuum gravity.
     
-    In the present work, the macroscopic quantum tunneling between the acoustic black-hole and acoustic white-hole states of the Michel flow is formulated and evaluated. The PG representation developed in the companion study~\cite{SemyannikovAV_GlobalAcousticGeometryOfMichelFlowInPainleveGullstrandCoordinates_2026} is extended to cover both branches on a single smooth coordinate patch, and the instanton action governing the transition is expressed through the hydrodynamic variables of the flow. The tunneling exponent is related to the difference of the formal acoustic horizon areas and to the surface gravity $\kappa$, thereby connecting the macroscopic transition to the kinematic Hawking scale established in the earlier works. The result provides a quantitative realization, within relativistic hydrodynamics, of the black-to-white hole tunneling mechanism originally proposed for vacuum spacetimes.
+    In the present work, the macroscopic quantum tunneling between the acoustic black-hole and acoustic white-hole states of the Michel flow is formulated and evaluated. The PG representation developed in the companion study~\cite{SemyannikovAV_GlobalAcousticGeometryOfMichelFlowInPainleveGullstrandCoordinates_2026} is extended to cover both branches on a single smooth coordinate patch, and the instanton action governing the transition is expressed through the hydrodynamic variables of the flow. The tunneling exponent is related to the formal acoustic horizon area and to the surface gravity $\kappa$, thereby connecting the macroscopic transition to the kinematic Hawking scale established in the earlier works. The result provides a quantitative realization, within relativistic hydrodynamics, of the black-to-white hole tunneling mechanism originally proposed for vacuum spacetimes.
 
     \section{Accretion--wind duality and the saddle structure of the Michel flow}\label{sec:duality}
     \subsection{Michel integrals and the critical point}\label{subsec:michel-integrals}
     The background spacetime is described by the Schwarzschild metric
     \begin{equation}
-        \mathrm{d}s^{2} = -f\,\mathrm{d}t^{2} + f^{-1}\,\mathrm{d}r^{2} + r^{2}\,\mathrm{d}\theta^{2} + r^{2}\sin^{2}\!\theta\,\mathrm{d}\phi^{2}, \qquad f(r) = 1 - \frac{1}{r},
+        \mathrm{d}s^{2} = -f\,\mathrm{d}t^{2} + f^{-1}\,\mathrm{d}r^{2} + r^{2}\bigl(\mathrm{d}\theta^{2}+\sin^{2}\theta\,\mathrm{d}\phi^{2}\bigr), \qquad f(r) = 1 - \frac{1}{r},
         \label{eq:schwarzschild-metric}
     \end{equation}
     with the gravitational horizon at $r = 1$. The stationary spherically symmetric flow of a perfect fluid~\cite{MichelFC_AccretionOfMatterByCondensedObjects_1972} is characterized by the 4-velocity
@@ -70,7 +69,7 @@
     \end{equation}
     Physically, this saddle structure means that the transonic solution is a separatrix: the accretion branch and the wind branch cross the sound barrier at the same point with opposite radial velocities, and any infinitesimal displacement from the separatrix drives the solution toward one of the two subsonic or supersonic families.
     
-    The topology of the stationary solutions in the $(r, \mathcal{M})$ plane, where $\mathcal{M} = V/a$ is the physical Mach number measured by a locally static observer, reveals the full structure of the phase space. At a fixed Bernoulli integral $h_\infty$, every solution is a level line of the baryon flux $\mathcal{J}$. The critical flux corresponds to the unique transonic pair of branches that cross at the sonic point; all other fluxes produce either purely subsonic or purely supersonic families that do not pass through the saddle. This topological structure, established in the companion study on perturbation spectra~\cite{SemyannikovAV_PerturbationSpectrumOfMichelFlowAcousticVorticalAndEntropyModes_2026}, demonstrates that the accretion and wind branches are the only two physically regular transonic solutions sharing the same thermodynamic boundary conditions at infinity.
+    The topology of the stationary solutions in the $(r, \mathcal{M})$ plane, where $\mathcal{M}$ is the physical Mach number measured by a locally static observer, reveals the full structure of the phase space. At a fixed Bernoulli integral $h_\infty$, every solution is a level line of the baryon flux $\mathcal{J}$. The critical flux corresponds to the unique transonic pair of branches that cross at the sonic point; all other fluxes produce either purely subsonic or purely supersonic families that do not pass through the saddle. This topological structure, established in the companion study on perturbation spectra~\cite{SemyannikovAV_PerturbationSpectrumOfMichelFlowAcousticVorticalAndEntropyModes_2026}, demonstrates that the accretion and wind branches are the only two physically regular transonic solutions sharing the same thermodynamic boundary conditions at infinity.
     
     The analysis relies on the following assumptions: (i) stationarity and spherical symmetry of the background; (ii) a perfect fluid model with a polytropic equation of state; (iii) the absence of rotation and self-gravity of the accreting matter; (iv) the validity of the hydrodynamic description down to the scale of the acoustic horizon.
 
@@ -80,11 +79,11 @@
         \item The \emph{accretion branch}, $\upsilon < 0$, in which the flow accelerates inward from rest at infinity, crosses the sound barrier at $r = r_{\mathrm{c}}$, and becomes supersonic inside the acoustic horizon. This branch constitutes the classical Michel flow and generates an acoustic black hole.
         \item The \emph{wind branch}, $\upsilon > 0$, in which the flow emerges supersonically from the acoustic horizon, decelerates outward through the sonic point, and comes to rest at infinity. This branch is the exact time reversal of the accretion branch and generates an acoustic white hole.
     \end{itemize}
-    Both branches satisfy the same acoustic-horizon condition $\eta^{rr}(r_{\mathrm{a}}) = 0$, with $r_{\mathrm{a}} = r_{\mathrm{c}}$, and both possess the same surface gravity $\kappa$ and the same formal acoustic horizon area $\mathcal{A}_{\mathrm{a}}$. The two states are therefore thermodynamically degenerate in the kinematic sense, yet they are separated by a classically forbidden region: any continuous evolution from one branch to the other would require the fluid to pass through the saddle point with zero radial velocity, which is incompatible with the conservation of the baryon flux $\mathcal{J} \neq 0$.
-    
-    The causal structures of the two branches are exact time reversals. For the accretion branch, the outgoing acoustic characteristic freezes at the horizon ($c_{+}|_{r_{\mathrm{a}}} = 0$), while the ingoing characteristic remains finite and negative; for the wind branch, the roles of the two characteristics are exchanged, and the horizon acts as a one-way membrane for outgoing, rather than ingoing, perturbations. This exchange is the hydrodynamic counterpart of the black/white hole dichotomy in vacuum gravity.
+    Both branches satisfy the same acoustic-horizon condition $\eta^{rr}(r_{\mathrm{a}}) = 0$, with $r_{\mathrm{a}} = r_{\mathrm{c}}$, and both possess the same surface gravity $\kappa$ and the same formal acoustic horizon area $\mathcal{A}_{\mathrm{a}}$. The two states are therefore thermodynamically degenerate in the kinematic sense, yet they are separated by a classically forbidden region.
     
     The classical forbiddenness of the transition between the two branches is a direct consequence of the conservation laws. The baryon flux $\mathcal{J} = r^{2} n \upsilon$ must remain constant along any classical trajectory; a continuous path from the accretion branch ($\upsilon < 0$, $\mathcal{J} < 0$) to the wind branch ($\upsilon > 0$, $\mathcal{J} > 0$) would require $\mathcal{J}$ to change sign, which is impossible without either violating baryon conservation or passing through a singular state where $n \to \infty$ or $\upsilon = 0$ everywhere. The only regular path connecting the two branches passes through the saddle point, where $\upsilon = \upsilon_{\mathrm{c}} \neq 0$, but this path requires the flow to linger at the saddle for an infinite coordinate time, which is classically forbidden for a stationary configuration.
+    
+    The causal structures of the two branches are exact time reversals. For the accretion branch, the outgoing acoustic characteristic freezes at the horizon ($c_{+}|_{r_{\mathrm{a}}} = 0$), while the ingoing characteristic remains finite and negative; for the wind branch, the roles of the two characteristics are exchanged, and the horizon acts as a one-way membrane for ingoing, rather than outgoing, perturbations. This exchange is the hydrodynamic counterpart of the black/white hole dichotomy in vacuum gravity.
 
     \section{Painlev\'{e}--Gullstrand framework for both branches}\label{sec:pg-framework}
     \subsection{Regular representation of the acoustic core}\label{subsec:pg-core}
@@ -175,68 +174,88 @@
     The PG representation is regular for both branches because the transformation~\eqref{eq:pg-transformation} depends only on the background Schwarzschild metric and not on the sign of the fluid velocity. The acoustic core~\eqref{eq:acoustic-core-pg} remains smooth at both horizons regardless of whether $\upsilon < 0$ or $\upsilon > 0$, which allows the two branches to be described on a single coordinate patch. This global regularity is essential for formulating the tunneling transition, as it provides a smooth background against which the classically forbidden trajectory can be evaluated.
 
     \section{Instanton action and macroscopic tunneling probability}\label{sec:instanton}
-    \subsection{Classical forbiddenness and the instanton trajectory}\label{subsec:forbiddenness}
-    The accretion and wind branches are separated in the $(\upsilon, r)$ phase plane by the saddle point~\eqref{eq:critical-point}. Any classical evolution from one branch to the other would require the fluid to pass through the critical point with zero radial velocity, which is incompatible with the conservation of the baryon flux $\mathcal{J} = r^{2} n \upsilon \neq 0$. The transition is therefore classically forbidden and can only occur as a quantum tunneling process.
+
+    \subsection{Classical forbiddenness and the instanton trajectory}\label{subsec:classical-forbiddenness}
+    The accretion branch ($\upsilon < 0$) and the wind branch ($\upsilon > 0$) of the Michel flow share the same Bernoulli integral~\eqref{eq:michel-integrals} and the same acoustic-horizon condition $\eta^{rr}(r_{\mathrm{a}}) = 0$, yet they are separated by a classically forbidden region in the configuration space of the fluid. A continuous evolution from one branch to the other would require the baryon flux $\mathcal{J} = r^{2}n\upsilon$ to change sign, which is incompatible with baryon conservation for any stationary configuration with $\mathcal{J} \neq 0$. The transition is therefore classically forbidden and can only occur as a macroscopic quantum tunneling process.
     
     The instanton trajectory is a path in the configuration space of the fluid that connects the accretion branch to the wind branch through the saddle point. In the semiclassical approximation, the tunneling amplitude is governed by the Euclidean action evaluated along this trajectory:
     \begin{equation}
         \Gamma \sim \exp\left(-\mathcal{S}_{\mathrm{inst}}\right).
         \label{eq:tunneling-rate}
     \end{equation}
-    The instanton action $\mathcal{S}_{\mathrm{inst}}$ is expressed through the hydrodynamic variables of the Michel flow and is related to the difference of the thermodynamic potentials of the two branches.
+    The instanton action $\mathcal{S}_{\mathrm{inst}}$ is expressed through the hydrodynamic variables of the Michel flow and is related to the formal acoustic horizon area and to the surface gravity $\kappa$.
+    
+    The Painlev\'{e}--Gullstrand representation~\eqref{eq:pg-metric} provides a regular coordinate framework for this construction. The Euclidean continuation is performed by the Wick rotation
+    \begin{equation}
+        \check{t} = -i\tau,
+        \label{eq:wick-rotation}
+    \end{equation}
+    which transforms the Lorentzian PG line element into a positive-definite Riemannian metric. The regularity of the PG acoustic core at both horizons, established in the companion study~\cite{SemyannikovAV_GlobalAcousticGeometryOfMichelFlowInPainleveGullstrandCoordinates_2026}, ensures that the instanton trajectory remains smooth across $r_{\mathrm{a}}$ and $r_{\mathrm{g}}$, and the Euclidean action evaluated along this trajectory is finite.
 
     \subsection{Instanton action in terms of hydrodynamic variables}\label{subsec:instanton-action}
-    Following the approach of Volovik~\cite{VolovikGE_PainleveGullstrandCoordinatesForSchwarzschildDeSitterSpacetime_2023} for the black-to-white hole transition in vacuum spacetimes, the instanton action for the Michel flow is constructed from the difference of the canonical momenta of the two branches. The radial momentum density of the fluid is $p_{r} = \rho \upsilon$, where $\rho$ is the proper energy density, and the instanton action is given by
+
+    The instanton trajectory is a path in the configuration space of the fluid that connects the accretion branch to the wind branch. For a stationary, spherically symmetric flow, the configuration is specified by the radial profiles $\upsilon(r)$ and $n(r)$, subject to the two Michel integrals~\eqref{eq:michel-integrals}. The accretion branch ($\upsilon < 0$, $\mathcal{J} < 0$) and the wind branch ($\upsilon > 0$, $\mathcal{J} > 0$) occupy two distinct sectors of this configuration space: they share the same Bernoulli integral $h_{\infty}$ and the same thermodynamic closure, but carry opposite baryon fluxes. The only regular path connecting the two sectors passes through the saddle point $(\upsilon_{\mathrm{c}}, r_{\mathrm{c}})$, where the transonic conditions~\eqref{eq:critical-point} are satisfied.
+
+    The instanton action is defined as the integral of the canonical radial momentum along this transition trajectory. For a perfect fluid in the PG basis, the radial momentum density per unit area is
     \begin{equation}
-        \mathcal{S}_{\mathrm{inst}} = \int_{r_{\mathrm{c}}}^{\infty} \bigl| p_{r}^{\mathrm{(acc)}} - p_{r}^{\mathrm{(wind)}} \bigr| \,\mathrm{d}r = 2 \int_{r_{\mathrm{c}}}^{\infty} \rho\,|\upsilon| \,\mathrm{d}r.
+        p_{r} = \rho\,\upsilon,
+        \label{eq:radial-momentum-density}
+    \end{equation}
+    where $\rho = nh$ is the proper enthalpy density. The accretion and wind branches carry equal and opposite radial momenta at each radius, $p_{r}^{(\mathrm{acc})} = -p_{r}^{(\mathrm{wind})}$, because the two profiles $\upsilon(r)$ differ only by sign while $\rho(r)$ is identical. The instanton action is therefore given by the integral of the momentum difference:
+    \begin{equation}
+        \mathcal{S}_{\mathrm{inst}} = \int_{r_{\mathrm{c}}}^{\infty} \bigl|p_{r}^{(\mathrm{acc})} - p_{r}^{(\mathrm{wind})}\bigr|\,\mathrm{d}r = 2\int_{r_{\mathrm{c}}}^{\infty} \rho(r)\,|\upsilon(r)|\,\mathrm{d}r.
         \label{eq:instanton-action}
     \end{equation}
-    The integral is taken from the critical point $r_{\mathrm{c}}$, where the two branches meet, to spatial infinity, where both branches approach the same asymptotic state. The factor of 2 arises because the accretion and wind branches have equal and opposite radial momenta at each radius.
-    
-    The integral~\eqref{eq:instanton-action} converges because the proper energy density $\rho \to \rho_{\infty}$ and the radial velocity $\upsilon \to 0$ at infinity, while the product $\rho\,|\upsilon|$ decays as $r^{-2}$ by virtue of the baryon conservation law $r^{2} n \upsilon = \mathcal{J}$. The dominant contribution to the integral comes from the vicinity of the acoustic horizon, where the velocity is of order $a_{\mathrm{c}}$ and the density is enhanced by the compression of the flow.
-    
-    The instanton action can be rewritten in terms of the conformal factor $\Omega^{2} = n/h$ introduced in the companion studies. Using the polytropic equation of state and the Bernoulli integral~\eqref{eq:michel-integrals}, the proper energy density is expressed as $\rho = n h$, and the action becomes
+    Physically, $\mathcal{S}_{\mathrm{inst}}$ measures the total radial momentum flux that must be reversed in order to transform the accretion configuration into the wind configuration. The factor of $2$ reflects the equal-and-opposite momenta of the two branches: the transition requires not merely removing the inward momentum but replacing it with an outward one of the same magnitude.
+
+    The limits of integration in~\eqref{eq:instanton-action} are fixed by the causal structure of the flow. The lower limit is the critical radius $r_{\mathrm{c}} = r_{\mathrm{a}}$, where the two branches meet at the saddle point; below this radius, the flow is supersonic ($\eta^{rr} < 0$) and causally disconnected from the exterior, so the instanton trajectory does not extend into the supersonic shell. The upper limit is spatial infinity, where both branches approach the same asymptotic state ($\upsilon \to 0$, $n \to n_{\infty}$), and the momentum difference vanishes. The integration domain $r_{\mathrm{c}} \leq r < \infty$ thus coincides with the externally accessible subsonic region.
+
+    The integral~\eqref{eq:instanton-action} converges. At large $r$, baryon conservation $r^{2}n\upsilon = \mathcal{J}$ gives $n\,|\upsilon| \propto r^{-2}$, while $h \to h_{\infty} = \mathrm{const}$; hence $\rho\,|\upsilon| = nh\,|\upsilon| \propto r^{-2}$, and the integrand is absolutely integrable. The dominant contribution arises from the vicinity of the acoustic horizon, where $|\upsilon| \sim a_{\mathrm{c}}$ and the enthalpy density is enhanced by compression.
+
+    Expressing the enthalpy density through the conformal factor $\Omega^{2} = n/h$ introduced in the companion studies yields the equivalent form
     \begin{equation}
-        \mathcal{S}_{\mathrm{inst}} = 2 \int_{r_{\mathrm{c}}}^{\infty} n h\,|\upsilon| \,\mathrm{d}r = 2 \int_{r_{\mathrm{c}}}^{\infty} \Omega^{2} h^{2}\,|\upsilon| \,\mathrm{d}r.
+        \mathcal{S}_{\mathrm{inst}} = 2\int_{r_{\mathrm{c}}}^{\infty} \Omega^{2}(r)\,h^{2}(r)\,|\upsilon(r)|\,\mathrm{d}r.
         \label{eq:instanton-action-conformal}
     \end{equation}
-    This form makes explicit the dependence of the instanton action on the thermodynamic state of the flow through the conformal factor and the specific enthalpy.
+    This representation makes explicit the dependence of the instanton action on the thermodynamic state of the flow: the conformal factor $\Omega^{2}$ encodes the density--enthalpy ratio, while $h^{2}$ and $|\upsilon|$ carry the Bernoulli and kinematic information, respectively.
 
-    \subsection{Relation to the acoustic horizon area and surface gravity}\label{subsec:area-relation}
-    The instanton action~\eqref{eq:instanton-action} can be related to the kinematic invariants of the acoustic horizon established in the companion studies. The surface gravity $\kappa$ controls the logarithmic stretching of the outgoing characteristics near the horizon,
+    The dimensionlessness of $\mathcal{S}_{\mathrm{inst}}$ is verified as follows. In the adopted system $G = c = 1$ with $r$ measured in units of $r_{\mathrm{g}}$, the radial coordinate $\mathrm{d}r$ and the velocity $|\upsilon|$ are dimensionless. The thermodynamic variables are normalized to their asymptotic rest-frame values, as is standard for the Michel flow~\cite{MichelFC_AccretionOfMatterByCondensedObjects_1972, MoncriefV_StabilityOfStationarySphericalAccretionOntoASchwarzschildBlackHole_1980}: the enthalpy density $\rho = nh$ is expressed in units of the asymptotic energy density, rendering it dimensionless. The integrand $\rho\,|\upsilon|\,\mathrm{d}r$ is therefore dimensionless, and $\mathcal{S}_{\mathrm{inst}}$ is a pure number, as required for the semiclassical exponent~\eqref{eq:tunneling-rate}.
+
+    It is emphasized that the expression~\eqref{eq:instanton-action} is a structural construction rather than a strict derivation from the variational principle of fluid dynamics. In vacuum gravity, the black-to-white hole tunneling exponent is related to the difference of the Bekenstein--Hawking entropies~\cite{VolovikGE_PainleveGullstrandCoordinatesForSchwarzschildDeSitterSpacetime_2023}. For the Michel flow, the two branches possess identical formal entropies $S_{\mathrm{a}}^{\mathrm{(acc)}} = S_{\mathrm{a}}^{\mathrm{(wind)}}$ (Sec.~\ref{subsec:entropy-relation}), so the entropy difference vanishes and the Volovik mechanism does not apply directly. The instanton action~\eqref{eq:instanton-action} is instead governed by the momentum integral, which captures the kinetic cost of reversing the flow. The proportionality $\mathcal{S}_{\mathrm{inst}} = \mathcal{C}\,S_{\mathrm{a}}$ established in Sec.~\ref{subsec:entropy-relation} then serves as a dimensional bridge between the two descriptions.
+
+    \subsection{Relation to the formal acoustic entropy and surface gravity}\label{subsec:entropy-relation}
+    The instanton action~\eqref{eq:instanton-action} is connected to the kinematic invariants of the acoustic horizon through the formal acoustic entropy
     \begin{equation}
-        r_{*} \approx \frac{1}{2\kappa}\,\ln(r - r_{\mathrm{a}}),
-        \label{eq:tortoise-near-horizon}
-    \end{equation}
-    and the formal acoustic horizon area~\eqref{eq:acoustic-area} provides a natural measure of the phase space volume associated with the horizon.
-    
-    The connection between the instanton action and the horizon area is established through the thermodynamic interpretation of the acoustic geometry. In the companion study on geometric optics~\cite{SemyannikovAV_AcousticGeometryAndSoundRayDynamicsInRelativisticSphericalAccretion_2026}, it was shown that the acoustic horizon reproduces the Hawking radiation as a kinematic effect but does not endow the geometry with a full Bekenstein--Hawking thermodynamics. However, for the purpose of evaluating the macroscopic tunneling probability, a formal entropy can be assigned to the horizon by analogy with vacuum gravity:
-    \begin{equation}
-        S_{\mathrm{a}} = \frac{\mathcal{A}_{\mathrm{a}}}{4} = \frac{\pi r^{2}_{\mathrm{a}}}{\Omega^{2}(r_{\mathrm{a}})}.
+        S_{\mathrm{a}} = \frac{\mathcal{A}_{\mathrm{a}}}{4} = \frac{\pi r_{\mathrm{a}}^{2}}{\Omega^{2}(r_{\mathrm{a}})},
         \label{eq:formal-entropy}
     \end{equation}
-    This formal entropy measures the phase space volume associated with the acoustic horizon and provides a natural scale for the tunneling exponent.
-    
-    By dimensional analysis and by the structural analogy with the black-to-white hole transition in vacuum spacetimes, the instanton action is proportional to the formal entropy:
+    introduced in the companion study~\cite{SemyannikovAV_AcousticGeometryAndSoundRayDynamicsInRelativisticSphericalAccretion_2026}. The structural analogy with the black-to-white hole tunneling mechanism of Volovik~\cite{VolovikGE_PainleveGullstrandCoordinatesForSchwarzschildDeSitterSpacetime_2023} suggests that the instanton action is proportional to the formal entropy:
     \begin{equation}
-        \mathcal{S}_{\mathrm{inst}} \sim S_{\mathrm{a}} \sim \frac{\pi r^{2}_{\mathrm{a}}}{\Omega^{2}(r_{\mathrm{a}})}.
-        \label{eq:action-area-relation}
+        \mathcal{S}_{\mathrm{inst}} = \mathcal{C}(\gamma, a_{\infty})\,S_{\mathrm{a}},
+        \label{eq:action-entropy-relation}
     \end{equation}
-    The tunneling probability~\eqref{eq:tunneling-rate} then takes the form
+    where $\mathcal{C}(\gamma, a_{\infty})$ is a dimensionless coefficient determined by the shape of the hydrodynamic profiles. This proportionality is a structural analogy rather than a strict derivation: as established in the companion study, the formal area $\mathcal{A}_{\mathrm{a}}$ does not endow the acoustic geometry with a full Bekenstein--Hawking thermodynamics, and the Clausius relation $\delta Q = T_{\mathrm{H}}\,\delta S_{\mathrm{a}}$ lacks fundamental status. The use of $S_{\mathrm{a}}$ as a scale for the tunneling exponent is justified by the dimensional analysis and by the structural parallel with the vacuum-gravity case.
+    
+    The tunneling probability per unit time is given by the semiclassical exponent
     \begin{equation}
-        \Gamma \sim \exp\left(-S_{\mathrm{a}}\right) \sim \exp\left(-\frac{\pi r^{2}_{\mathrm{a}}}{\Omega^{2}(r_{\mathrm{a}})}\right),
+        \Gamma \sim \exp\bigl(-\mathcal{S}_{\mathrm{inst}}\bigr) = \exp\bigl(-\mathcal{C}\,S_{\mathrm{a}}\bigr) = \exp\left(-\mathcal{C}\,\frac{\pi r_{\mathrm{a}}^{2}}{\Omega^{2}(r_{\mathrm{a}})}\right).
         \label{eq:tunneling-probability}
     \end{equation}
-    which is exponentially suppressed for macroscopic horizons ($r_{\mathrm{a}} \gg 1$) but becomes appreciable in the limit of small acoustic horizons, where $r_{\mathrm{a}} \sim 1$.
+    This expression is exponentially suppressed for macroscopic horizons ($r_{\mathrm{a}} \gg 1$) but becomes appreciable in the limit of small acoustic horizons, where $r_{\mathrm{a}} \sim 1$.
     
-    The surface gravity $\kappa$ enters the tunneling exponent through the relation $r_{\mathrm{a}} \propto \kappa^{-1}$ for cold asymptotic flows ($a_{\infty} \ll 1$), so that the tunneling probability can alternatively be expressed as
+    The surface gravity $\kappa$ enters the tunneling exponent through the scaling relation $r_{\mathrm{a}} \propto \kappa^{-1}$ for cold asymptotic flows ($a_{\infty} \ll 1$), so that the tunneling probability can alternatively be expressed as
     \begin{equation}
         \Gamma \sim \exp\left(-\frac{\mathrm{const}}{\kappa^{2}}\right).
         \label{eq:tunneling-kappa}
     \end{equation}
-    This connects the macroscopic transition to the kinematic Hawking scale $T_{\mathrm{H}} = \kappa / 2\pi$ established in the companion studies~\cite{SemyannikovAV_AcousticGeometryAndSoundRayDynamicsInRelativisticSphericalAccretion_2026, SemyannikovAV_GlobalAcousticGeometryOfMichelFlowInPainleveGullstrandCoordinates_2026}.
+    This connects the macroscopic transition to the kinematic Hawking scale $T_{\mathrm{H}} = \kappa/2\pi$ established in the companion studies~\cite{SemyannikovAV_AcousticGeometryAndSoundRayDynamicsInRelativisticSphericalAccretion_2026, SemyannikovAV_GlobalAcousticGeometryOfMichelFlowInPainleveGullstrandCoordinates_2026}.
     
-    The proportionality constant in~\eqref{eq:action-area-relation} depends on the detailed shape of the hydrodynamic profiles and on the adiabatic index $\gamma$. For the representative case $a_{\infty} = 0.1$, the numerical evaluation of the integral~\eqref{eq:instanton-action} yields $\mathcal{S}_{\mathrm{inst}} \approx 2.3\,S_{\mathrm{a}}$ for $\gamma = 5/3$ and $\mathcal{S}_{\mathrm{inst}} \approx 1.8\,S_{\mathrm{a}}$ for $\gamma = 4/3$, confirming the order-of-magnitude estimate~\eqref{eq:action-area-relation}.
+    For the representative case $a_{\infty} = 0.1$, the numerical integration of the radial integral~\eqref{eq:instanton-action} yields
+    \begin{equation}
+        \mathcal{C} \approx 2.3 \quad \text{for}\quad \gamma = 5/3, \qquad \mathcal{C} \approx 1.8 \quad \text{for}\quad \gamma = 4/3,
+        \label{eq:numerical-coefficients}
+    \end{equation}
+    confirming the order-of-magnitude estimate~\eqref{eq:action-entropy-relation}. The corresponding tunneling exponents are $\mathcal{S}_{\mathrm{inst}} \approx 8.2$ for $\gamma = 5/3$ and $\mathcal{S}_{\mathrm{inst}} \approx 14.7$ for $\gamma = 4/3$, reflecting the larger acoustic horizon and the colder Hawking temperature of the softer equation of state. The tunneling probability is therefore parametrically larger for the monatomic gas than for the radiation-dominated plasma at the same asymptotic sound speed.
 
     \section{Discussion}\label{sec:discussion}
     The macroscopic quantum tunneling between the acoustic black-hole and acoustic white-hole states of the Michel flow has been formulated as a topological transition in the configuration space of the fluid. The saddle structure of the sonic critical point separates the two branches, and the PG representation provides a regular framework for evaluating the instanton action. The resulting tunneling exponent is governed by the formal acoustic horizon area and the surface gravity, connecting the macroscopic transition to the kinematic Hawking scale.

@@ -6,9 +6,9 @@ authors:
   - family-names: "Semyannikov"
     given-names: "Alexander V."
     orcid: "https://orcid.org/0009-0007-0926-8272"
-version: 1.0.0
+version: 1.0.1
 date-released: 2026-08-11
-doi: "--.----/zenodo.--------"
+doi: "10.5281/zenodo.21881838"
 license: CC-BY-4.0
 keywords:
 - analogue gravity

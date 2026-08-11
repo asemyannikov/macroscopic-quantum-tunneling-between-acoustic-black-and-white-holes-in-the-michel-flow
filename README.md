@@ -1,6 +1,6 @@
 # Macroscopic Quantum Tunneling Between Acoustic Black and White Holes in the Michel Flow
 
-[![DOI](https://zenodo.org/badge/DOI/--.----/zenodo.--------.svg)](https://doi.org/--.----/zenodo.--------)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21881838.svg)](https://doi.org/10.5281/zenodo.21881838)
 
 This repository contains the preprint, LaTeX source, bibliography, and figures for:
 
@@ -38,7 +38,7 @@ latexmk -c
 
 ## Citation
 
-Please use the metadata in `CITATION.cff` when citing this work. The DOI for all versions is [--.----/zenodo.--------](https://doi.org/--.----/zenodo.--------).
+Please use the metadata in `CITATION.cff` when citing this work. The DOI for all versions is [10.5281/zenodo.21881838](https://doi.org/10.5281/zenodo.21881838).
 
 ## License
 

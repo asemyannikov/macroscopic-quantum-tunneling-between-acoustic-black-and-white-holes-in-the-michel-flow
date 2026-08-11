@@ -1,5 +1,5 @@
 {
-  "title": "Global Acoustic Geometry of Michel Flow in Painlevé-Gullstrand Coordinates",
+  "title": "Macroscopic Quantum Tunneling Between Acoustic Black and White Holes in the Michel Flow",
   "upload_type": "publication",
   "publication_type": "article",
   "publication_date": "2026-08-07",
@@ -14,12 +14,26 @@
   "access_right": "open",
   "license": "cc-by-4.0",
   "keywords": [
-      "Michel accretion",
-      "acoustic horizon",
-      "phonon geodesics",
-      "black holes",
       "analogue gravity",
-      "general relativity"
+      "acoustic black hole",
+      "acoustic white hole",
+      "Michel accretio",
+      "macroscopic quantum tunneling",
+      "instanton",
+      "Painlevé–Gullstrand coordinate",
+      "Coleman tunneling",
+      "Euclidean action",
+      "Hawking radiation",
+      "acoustic horizo",
+      "surface gravity",
+      "relativistic hydrodynamics",
+      "spherical accretio",
+      "Schwarzschild black hole",
+      "transonic flow",
+      "quantum phase sli",
+      "persistent current",
+      "detailed balance",
+      "Bose–Einstein condensate"
   ],
   "version": "1.0.0",
   "language": "eng"

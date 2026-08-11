@@ -7,13 +7,27 @@ authors:
     given-names: "Alexander V."
     orcid: "https://orcid.org/0009-0007-0926-8272"
 version: 1.0.0
-date-released: 2026-08-07
-doi: "__.____/zenodo._____"
+date-released: 2026-08-11
+doi: "--.----/zenodo.--------"
 license: CC-BY-4.0
 keywords:
- - Michel accretion 
- - acoustic horizon
- - phonon geodesics
- - black holes 
- - analogue gravity
- - general relativity
+- analogue gravity
+- acoustic black hole
+- acoustic white hole
+- Michel accretio
+- macroscopic quantum tunneling
+- instanton
+- Painlevé–Gullstrand coordinate
+- Coleman tunneling
+- Euclidean action
+- Hawking radiation
+- acoustic horizo
+- surface gravity
+- relativistic hydrodynamics
+- spherical accretio
+- Schwarzschild black hole
+- transonic flow
+- quantum phase sli
+- persistent current
+- detailed balance
+- Bose–Einstein condensate

@@ -12,7 +12,7 @@
             {\footnotesize\thepage}\hfil{\footnotesize\itshape\leftmark}%
         \fi}%
     \def\@oddfoot{\footnotesize\itshape
-        Preprint, \today\hfill\thepage\relax}%
+        Preprint\hfill\thepage\relax}%
     \let\@evenfoot\@oddfoot
 }
 \AtBeginDocument{\pagestyle{pprintTitle}}
@@ -98,7 +98,7 @@
                 v_{\mathrm{ff}}(r) \equiv -r^{-1/2}, \qquad \psi(r) \equiv -v_{\mathrm{ff}}\,f^{-1}, \qquad \mathrm{d}\check{t} = \mathrm{d}t + \psi(r)\,\mathrm{d}r,
                 \label{eq:pg-transformation}
             \end{equation}
-            brings the metric~\eqref{eq:schwarzschild-metric} to the regular form:
+            brings the metric~\eqref{eq:schwarzschild-metric} to the regular form $\check{g}_{\mu\nu}$:
             \begin{equation}
                 \mathrm{d}s^{2} = -f\,\mathrm{d}\check{t}^{\,2} - 2\,v_{\mathrm{ff}}\,\mathrm{d}\check{t}\,\mathrm{d}r + \mathrm{d}r^{2} + r^{2}\,\mathrm{d}\theta^{2} + r^{2}\sin^{2}\!\theta\,\mathrm{d}\phi^{2}.
                 \label{eq:pg-metric}
@@ -117,15 +117,15 @@
             
             The acoustic core in the PG basis,
             \begin{equation}
-                \check{\eta}_{\mu\nu} = \check{g}_{\mu\nu} - \beta\,\check{u}_{\mu}\,\check{u}_{\nu}, \qquad \beta = a^{2} - 1,
+                \zeta_{\mu\nu} = \check{g}_{\mu\nu} - \beta\,\check{u}_{\mu}\,\check{u}_{\nu}, \qquad \beta = a^{2} - 1,
                 \label{eq:acoustic-core-pg}
             \end{equation}
             satisfies the determinant identity
             \begin{equation}
-                \check{\eta}_{\check{t}\check{t}}\,\check{\eta}_{\check{r}\check{r}} - \check{\eta}_{\check{t}\check{r}}^{\,2} = -a^{2},
+                \zeta_{\check{t}\check{t}}\,\zeta_{rr} - \zeta_{\check{t}r}^{\,2} = -a^{2},
                 \label{eq:determinant-identity}
             \end{equation}
-            for any $a > 0$, which reflects the hyperbolicity of the acoustic core and excludes coordinate degeneracies. The acoustic-horizon condition is equivalent to $\check{\eta}_{\check{t}\check{t}} = 0$ and reduces to~\cite{SemyannikovAV_GlobalAcousticGeometryOfMichelFlowInPainleveGullstrandCoordinates_2026}
+            for any $a > 0$, which reflects the hyperbolicity of the acoustic core and excludes coordinate degeneracies. The acoustic-horizon condition is equivalent to $\zeta_{\check{t}\check{t}} = 0$ and reduces to~\cite{SemyannikovAV_GlobalAcousticGeometryOfMichelFlowInPainleveGullstrandCoordinates_2026}
             \begin{equation}
                 \beta(r_{\mathrm{a}})\,f(r_{\mathrm{a}})\,\vartheta^{2}(r_{\mathrm{a}}) = -1.
                 \label{eq:horizon-condition-pg}
@@ -135,7 +135,7 @@
         \subsection{Characteristic velocities for both branches}\label{subsec:characteristics-both}
             The characteristic velocities for radial rays,
             \begin{equation}
-                c_{\pm} = \frac{-\check{\eta}_{\check{t}\check{r}} \pm a}{\check{\eta}_{\check{r}\check{r}}},
+                c_{\pm} = \frac{-\zeta_{\check{t}r} \pm a}{\zeta_{rr}},
                 \label{eq:characteristic-speeds}
             \end{equation}
             are finite at both horizons~\cite{SemyannikovAV_GlobalAcousticGeometryOfMichelFlowInPainleveGullstrandCoordinates_2026}. For the \emph{accretion branch} ($\upsilon < 0$), the condition~\eqref{eq:horizon-condition-pg} yields:
